@@ -329,7 +329,7 @@ class _BottomPickerState extends State<BottomPicker> {
         ),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.fromLTRB(12.0, 12.0, 12.0, 20.0),
         child: Column(
           children: [
             Padding(
@@ -356,11 +356,13 @@ class _BottomPickerState extends State<BottomPicker> {
                 ],
               ),
             ),
+            SizedBox(height: 20.0),
             Expanded(
               child: widget.bottomPickerType == BOTTOM_PICKER_TYPE.simple
                   ? _renderSimplePicker()
                   : _renderDateTimePicker(widget.datePickerMode),
             ),
+            SizedBox(height: 20.0),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
